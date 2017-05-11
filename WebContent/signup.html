@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Sign Up</title>
+<script type="text/javascript">
+function validate()
+{
+	  if(document.myform.mail.value=="")
+		{
+		   alert("enter correct Email ID!");
+		   document.myform.mail.focus();
+		   return false;
+		}
+	if(document.myform.pass.value=="" || document.myform.pass.value.length<6)
+		{
+		      alert("enter the password of atleast 6 characters!");
+		      document.myform.pass.focus();
+		      return false;
+		}
+	 if(document.myform.reenter.value!=document.myform.pass.value)
+		{
+		     alert("password should match the entered password!")
+		     document.myform.reenter.focus();
+		     return false;
+		}
+	if(document.myform.name.value=="")
+		{
+		     alert("Enter the Full Name!");
+		     document.myform.name.focus();
+		     return false;
+		}
+	 if(document.myform.number.value==""||document.myform.number.value.length!=10||isNaN(document.myform.number.value))
+	 {
+	    alert("enter the 10 digit phone number in format ########### ");
+	    document.myform.number.focus();
+	    return false;
+	 }
+	 if( document.form.cities.value == "-1" ) 
+	   { 
+	     alert( " Entire your city!" ); 
+	     return false; 
+	  }
+	var email=document.myform.mail.value;
+	  atpos=email.indexof("@");
+	  document.write(atpos);
+	  dotpos=email.lastIndexof(".");
+	 if(atpos < 1 || ( dotpos - atpos < 2 ))
+		 {
+		   alert("enter correct Email ID!");
+		   document.myform.mail.focus();
+		   return false;
+		 }
+	return true;
+	}
+</script>
+</head>
+<body style="background-color:skyblue;">
+<center>
+<h2 style="color:blue;">SIGN UP TO RIDE</h2>
+<i style="color:red;">Create your account and get moving in minutes.</i>
+<form action="Signup" name="myform" method="get" onsubmit=return(validate()); >
+<table align="center" cellspacing="1" cellpading="1">
+<tr>
+ <th>Email Id:</th>
+ <th><input type="text" name="mail" placeholder="adudodla.sahith@example.com" maxlength="40" /></th>
+</tr>
+<tr>
+ <th>password:</th>
+ <th><input type="password" name="pass" placeholder="Atleast 6 characters" maxlength="20" /></th>
+</tr>
+ <tr>
+ <th>Confirm Password:</th>
+ <th><input type="password"  name="reenter" placeholder="Confirm..."/></th>
+ </tr>
+ <tr>
+ <th>Name:</th>
+ <th><input type="text" name="name" placeholder="Full Name" maxlength="20" /></th>
+ </tr>
+ <tr>
+  <th>Phone number:</th>
+  <th><input type="number" name="number"  placeholder="10 Digits Only" maxlength="10" /></th>
+  </tr>
+  <tr>
+<th>City</th>
+ <th><select name="city" required>
+    <option value="-1" selected> select city</option>
+    <option value="warangal">warangal</option>
+    <option value="hyderabad">hyderabad</option>
+    <option value="vizag">vizag</option>
+    <option value="bangalore">bangalore</option>
+    <option value="mumbai">mumbai</option>
+    <option value="chennai">chennai</option>
+    <option value="Delhi">Delhi</option>
+    </select>
+   </th>
+</tr>
+   <tr>
+   <th><input type="submit" value="Sign Up" /> 
+   <th><input type="reset" value="Reset" /></th>
+   </tr>
+</table>
+</form>
+<h2>Now</h2>
+<a href="book.html">Book Cab</a>
+</center>
+</body>
+</html>

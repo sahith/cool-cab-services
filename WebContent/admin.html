@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Admin</title>
+<style>
+.logoutpos{
+position:fixed;
+right:10px;
+top:5px;
+color:blue;
+}
+</style>
+
+<script type="text/javascript">
+/*function DisableBackButton() {
+	window.history.forward()
+	}
+	DisableBackButton();
+	window.onload = DisableBackButton;
+	window.onpageshow = function(evt) { if (evt.persisted) DisableBackButton() }
+	window.onunload = function() { void (0) }*/
+</script>
+</head>
+
+<body  style="background-color:#CCFFCC">
+<center><h1><i>Welcome Admin</b></i></center>
+<h2 style="color:blue;">Admin Panel</h2>
+<form align="right" name="form" method="post" action="Logout" >
+<label class="logoutpos">
+<input type="submit" value="logout" name="Signout">
+</label>
+</form>
+<table cellpadding="10" cellspacing="10">
+<tr>
+ <th><p style="margin-left:10em";></p></th>
+ <th><a href="adddriver.html" style="color:red;"><i>Add Driver</i></a></th>
+ <th><a href="viewbooking.html" style="color:red;"><i>View Bookings</i></a></th>
+ <th><a href="list.html" style="color:red;"><i>Set Commission</i></a></th>
+</tr>
+<tr>
+<th><p style="margin-left:10em";></p></th>
+ <th><a href="list.html" style="color:red;"><i>View Bills</i></a></th>
+ <th><a href="list.html" style="color:red;"><i>List of Members</i></a></th>
+  <th><a href="Listdrivers" style="color:red;"><i>List of Drivers</i></a></th>
+</tr>
+<tr>
+<th><p style="margin-left:10em";></p></th>
+ <th><a href="Viewreports" style="color:red;"><i>View Reports</i></a></th>
+ </tr>
+</table>
+</body>
+</html>

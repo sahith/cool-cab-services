@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>View bookings</title>
+</head>
+<body>
+<form name="myform" method="get" action="Viewbookings">
+<table>
+ <tr>
+  <th>city</th>
+  <th><select name="cities" required>
+    <option value="warangal" selected>warangal</option>
+    <option value="hyderabad">hyderabad</option>
+    <option value="vizag">vizag</option>
+    <option value="bangalore">bangalore</option>
+    <option value="mumbai">mumbai</option>
+    <option value="chennai">chennai</option>
+    <option value="Delhi">Delhi</option>
+    </select>
+   </th>
+   <th><p style="margin-left:3em;"></p></th>
+  <th>Date</th>
+  <th><input type="date" name="date" maxlength="10" placeholder="yyyy-mm-dd(format)" required /></th>
+  <th><p style="margin-left:3em;"></p></th>
+  <th>Status</th>
+  <th><select name="status" required>
+    <option value="pending" selected>pending</option>
+    <option value="dassign">Driver Assigned</option>
+    <option value="completed">completed</option>
+  </select></th>
+  <th><p style="margin-left:3em;"></p></th>
+  <th><input type="submit" value="View"/></th>
+  </tr>
+</table>
+</form>
+</body>
+</html>

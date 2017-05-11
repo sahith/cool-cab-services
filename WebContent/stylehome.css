@@ -1,0 +1,88 @@
+@charset "utf-8";
+/*CSS DOCUMENT*/
+*
+{
+	margin:0px;
+	padding:0px;
+}
+
+#Content ul
+{
+	list-style:none;
+	
+}
+
+#Content ul li
+{	
+	font-family:Consolas;
+	background-color:#000000;
+	border:1px solid white;
+	width:160px;
+	height:35px;
+	line-height:35px;
+	text-align:center;
+	float:left;
+	border-radius:5px;
+	border:5px;
+	position:relative;
+	text-decoration:blink;
+}
+
+#Content ul li a{
+	text-decoration:blink;
+	color:#990099;
+	display:block;
+	font-family:Consolas;
+	font-size:20px;
+}
+
+#Content ul li a:hover
+{
+	background-color:skyblue;
+	border:5px;
+}
+
+#Content ul ul li
+{	
+	font-family:Arial;
+	background-color:orange;
+	border:1px solid white;
+	width:150px;
+	font-weight:bold;
+	height:35px;
+	line-height:35px;
+	text-align:center;
+	float:left;
+	font-size:15px;
+	border-radius:5px;
+	border:5px;
+	text-decoration:blink;
+}
+
+#Content ul ul
+{
+	position:absolute;
+	display:block;
+	visibility:hidden;
+}
+
+#Content ul li:hover ul
+{
+	position:absolute;
+	display:block;
+	visibility:visible;
+}
+
+#Content ul ul li a{
+	text-decoration:blink;
+	color:darkblue;
+	display:block;
+}
+
+#Content ul ul li a:hover
+{
+	background-color:paleblue;
+	font-size:15px;
+	border:5px;
+}
+

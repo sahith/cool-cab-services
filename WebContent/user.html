@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>User Login</title>
+<style type="text/css">
+.logoutpos{
+position:fixed;
+right:120px;
+top:10px;
+color:blue;
+}
+.adjust{
+color:blue;
+}
+</style>
+<script type="text/javascript">
+ function validate(){
+	 if( document.form.cities.value == "-1" ) 
+	   { 
+	     alert( " provide your city!" ); 
+	     return false; 
+	  }
+	 if( document.form.cab.value == "-1" ) 
+	   { 
+	     alert( "Please provide your cab type!" ); 
+	     return false; 
+	   }
+	 if( document.form.pick.value == "-1" ) 
+	   { 
+	     alert( "Please provide your pick up area!" ); 
+	     return false; 
+	   }
+	 if( document.form.drop.value == "-1" ) 
+	   { 
+	     alert( "Please provide your drop area!" ); 
+	     return false; 
+	 }
+	 if(document.form.date.value=="")
+		 {
+		 alert("enter the pick up date");
+		 return false;
+		 }
+	 if(document.form.time.value=="")
+	 {
+	   alert("enter the pick up time");
+	    return false;
+	 }
+	 if(document.form.pick.value==document.form.drop.value)
+		 {
+		   alert("Pick and Drop Locality cannot be same!!");
+		   return false;
+		 }
+	 return true;
+ }
+</script>
+</head>
+<body style="background-color:#CCFF00">
+<center><h2 style="color:red;">Welcome to Cool Cabs</h2></center>
+<form align="right" name="myform" method="get" action="Logout">
+<label class="logoutpos">
+<table>
+<tr>
+ <th><a href=Mybookings>My Bookings</a></th>
+ <th><p style="margin-left:2em";></p></th>
+ <th><input type="submit" value="logout" name="Signout" /></th>
+ </tr>
+</table>
+</label>
+</form>
+<form  name="form" method="get" action="Booknow" onsubmit=return(validate());>
+<label class="adjust">
+<table>
+<tr>
+<th>Choose City</th>
+ <th><select name="cities" required>
+    <option value="-1" selected> select city</option>
+    <option value="warangal">warangal</option>
+    <option value="hyderabad">hyderabad</option>
+    <option value="vizag">vizag</option>
+    <option value="bangalore">bangalore</option>
+    <option value="mumbai">mumbai</option>
+    <option value="chennai">chennai</option>
+    <option value="Delhi">Delhi</option>
+    </select>
+   </th>
+</tr>
+<tr>
+ <th>Choose Cab Type</th>
+ <th><select name="cab" required>
+    <option value="-1" selected> select car type</option>
+    <option value="Micro">Micro</option>
+    <option value="Mini">Mini</option>
+    <option value="Auto">Auto</option>
+    <option value="Prime">Prime</option>
+    </select>
+   </th>
+</tr>
+<tr>
+  <th>Pick up Area</th>
+ <th><select name="pick" required>
+    <option value="-1" selected>pick up Locality</option>
+    <option value="Sector 1-A">Sector 1-A</option>
+    <option value="Sector 2-A">Sector 2-A</option>
+    <option value="Sector 3-A">Sector 3-A</option>
+    <option value="Sector 4-A">Sector 4-A</option>
+    </select>
+   </th>
+</tr>
+<tr>
+  <th>Drop Area</th>
+ <th><select name="drop" required>
+ <option value="-1" selected>Drop Locality</option>
+    <option value="Sector 1-A">Sector 1-A</option>
+    <option value="Sector 2-A">Sector 2-A</option>
+    <option value="Sector 3-A">Sector 3-A</option>
+    <option value="Sector 4-A">Sector 4-A</option>
+    </select>
+   </th>
+</tr>
+<tr>
+<th>Pick Up Date</th>
+<th><input type="date" name="date" maxlength="10" placeholder="yyyy-mm-dd(format)" required /></th>
+</tr>
+<tr>
+<th>Pick Up Time</th>
+<th><input type="datetime" name="time" maxlength="11" placeholder="hh-mm-am/pm" required /></th>
+</tr>
+<tr>
+<th><p style="margin-left:"5em";></p></th>
+<th><input type="submit" value="Book Now" /></th>
+</tr>
+</table>
+</label>
+</form>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>add driver</title>
+<script type="text/javascript">
+function validate(){
+	 if( document.form.cities.value == "-1" ) 
+	   { 
+	     alert( "Please provide your city!" ); 
+	     return false; 
+	 }
+	if(document.form.name.value=="")
+		{
+		      alert("enter the name");
+		      document.form.name.focus();
+		      return false;
+		}
+	if(document.form.mail.value=="")
+	{
+	   alert("enter correct Email ID!");
+	   document.myform.mail.focus();
+	   return false;
+	}
+	 if(document.form.number.value==""||document.form.number.value.length!=10||isNaN(document.form.number.value))
+	 {
+	    alert("enter the 10 digit phone number in format ########### ");
+	    document.form.number.focus();
+	    return false;
+	 }
+	 if(document.form.pass.value=="" || document.form.pass.value.length<6)
+		{
+		      alert("enter the password of atleast 6 characters!");
+		      document.form.pass.focus();
+		      return false;
+		}
+	 if(document.form.confirm.value!=document.form.pass.value)
+		{
+		     alert("password should match the entered password!")
+		     document.form.confirm.focus();
+		     return false;
+		}
+	 if( document.form.car.value == "-1" ) 
+	   { 
+	     alert( "Please provide your car type!" ); 
+	     return false; 
+	 }
+	 if(document.form.carname.value=="")
+		{
+		      alert("enter the car name");
+		      document.form.carname.focus();
+		      return false;
+		}
+	 if(document.form.carnumber.value=="")
+	 {
+	    alert("enter the car number ");
+	    document.form.carnumber.focus();
+	    return false;
+	 }
+	return ( true );
+}
+</script>
+</head>
+<body style="background-color:#CC00FF ">
+<center><h2 style="color:red;">Add Driver</h2></center>
+<form name="form" method="get" action="AddDriver" onsubmit=return(validate());>
+<table>
+<tr>
+<th>Working City</th>
+ <th><select name="cities" required>
+    <option value="warangal">warangal</option>
+    <option value="hyderabad">hyderabad</option>
+    <option value="vizag">vizag</option>
+    <option value="bangalore">bangalore</option>
+    <option value="mumbai">mumbai</option>
+    <option value="chennai">chennai</option>
+    <option value="Delhi">Delhi</option>
+    </select>
+   </th>
+  </tr>
+<tr>
+<th>Driver Name</th>
+<th><input type="text" name="name" placeholder="Driver Name" maxlength="20" required/></th>
+</tr>
+<tr>
+<th>Driver's Address</th>
+<th><textarea rows="5" cols="15" placeholder="Address"></textarea></th>
+</tr>
+<tr>
+<th>Email Id</th>
+<th><input type="text" name="mail" placeholder="sunny@example.com" /></th>
+</tr>
+<tr>
+<th>Phone Number</th>
+<th><input type="number" name="number" placeholder="10 digit mobile number" maxlength="10" required/></th>
+</tr>
+<tr>
+<th>Password</th>
+<th><input type="password" name="pass" placeholder="Atleast 6 characters" required /></th>
+</tr>
+<tr>
+<th>Confirm Password</th>
+<th><input type="password" name="confirm"  maxlength="20" placeholder="confirm" required/></th>
+</tr>
+<tr>
+ <th><p style="margin-left:10em"></p></th>
+ <th><h3>Car Details</h3></th>
+</tr>
+<tr>
+ <th>Car Type</td>
+ <th><select name="car" required>
+    <option value="-1" selected> select car type</option>
+    <option value="Micro">Micro</option>
+    <option value="Mini">Mini</option>
+    <option value="Auto">Auto</option>
+    <option value="Prime">Prime</option>
+    </select>
+   </th>
+  </tr>
+ <tr>
+<th>Car Name</th>
+<th><input type="text" name="carname" placeholder="Car Name" required /></th>
+</tr>
+<tr>
+<th>Car Number</th>
+<th><input type="text" name="carnumber" placeholder="car number"/></th>
+</tr>
+<tr>
+<th><p style="margin-left:5em"></p></th>
+<th><input type="submit" value="Add Driver" /></th>
+</tr>
+</table>
+</form>
+</body>
+</html>

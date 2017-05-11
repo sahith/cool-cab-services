@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>login</title>
+<script type="text/javascript">
+ function validate()
+ {
+	 if(document.myform.number.value==""||document.myform.number.value.length!=10||isNaN(document.myform.number.value))
+		 {
+		    alert("enter the 10 digit phone number in format ########### ");
+		    document.myform.number.focus();
+		    return false;
+		 }
+	 if(document.myform.pass.value=="")
+		 {
+		    alert("enter the password!");
+		    document.myform.pass.focus();
+		    return false;
+		 }
+	 return true;
+ }
+</script>
+</head>
+<body style="background-color:green;">
+   <form name="myform" action="AdLogin" method="get" onsubmit="return(validate());">
+			<table align="center" cellspacing="2" cellpading="2">
+			<tr>
+               <th><a href="main.html">Home</a></th>
+			</tr>
+			<tr>
+				<th>phone number:</th>
+				<th><input type="number" name="number" placeholder="number" maxlength="10" required></th>
+			</tr>
+			<tr>
+				<th>Password:</th>
+				<th><input type="password" name="pass" placeholder="password" maxlength="20" required></th>
+			</tr>
+			<tr>
+				<th><input type="submit" value="Login"/></th>
+			</tr>
+		
+			</table>
+		</form>
+</body>
+</html>
